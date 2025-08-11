@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/bb7640ae82.js" crossorigin="anonymous"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 <div id="header">
@@ -25,8 +28,8 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Programing Designer</p>
-            <h1>Hi, I'm <span>Tina</span><br> Chen From Taiwan</h1>
+            <p>Programming Designer</p>
+            <h1>Hi, I'm <span>Tina</span><br><span id="typewriter"></span></h1>
         </div>
     </div>
 </div>
@@ -35,12 +38,32 @@
 <div id="about">
     <div class="container">
         <div class="row">
-            <div class="about-col-1">
+            <div class="about-col-1" data-aos="fade-right" data-aos-duration="1000">
                 <img src="images/user_chen.png">
             </div>
-            <div class="about-col-2">
+            <div class="about-col-2" data-aos="fade-left" data-aos-duration="1000">
                 <h1 class="sub-title">About Me</h1>
                 <p>I'm Tina Chen (陳韻帆), a passionate software engineer specializing in embedded systems and IoT development. With a Master's degree in Computer Science from National Taiwan Normal University, I bring hands-on experience in firmware engineering, cloud integration, and full-stack development. My expertise spans from low-level C/C++ programming to cloud architectures using AWS services. I'm passionate about creating innovative solutions that bridge hardware and software, turning complex technical challenges into elegant, scalable systems.</p>
+                
+                <!-- 統計數據區塊 -->
+                <div class="stats-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="4">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Technologies Mastered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Companies Worked</div>
+                    </div>
+                </div>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
@@ -48,15 +71,42 @@
                     <p class="tab-links" onclick="opentab('education', event)">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Programming Languages</span><br>C, C++, Java, Python</li>
-                        <li><span>Web Development</span><br>HTML, JavaScript, JSON</li>
-                        <li><span>Tools & Technologies</span><br>Git, Wireshark, Postman, Selenium, Makefile</li>
-                        <li><span>Database</span><br>PostgreSQL, MySQL</li>
-                        <li><span>Operating Systems</span><br>Linux</li>
-                        <li><span>AWS</span><br>AWS IoT, EC2, RDS</li>
-                        <li><span>Other</span><br>Arduino, Shell Scripting</li>
-                    </ul>
+                    <div class="skill-item">
+                        <span class="skill-name">C/C++</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS Cloud Services</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Linux Systems</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="85%"></div>
+                        </div>
+                    </div>
                 </div>                
                 <div class="tab-contents" id="experience">
                     <ul>
@@ -80,21 +130,21 @@
 <!-- --------services------- -->
 <div id="services">
     <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title" data-aos="fade-up" data-aos-duration="800">My Services</h1>
         <div class="services-list">
-            <div>
+            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 <i class="fa-solid fa-code"></i>
                 <h2>Embedded Systems Development</h2>
                 <p>專精於嵌入式 Linux 系統開發，使用 C/C++ 進行韌體設計與開發。具備豐富的硬體與軟體整合經驗，能夠開發高效能、穩定的嵌入式解決方案。</p>
                 <a href="#">Learn more</a>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <i class="fa-solid fa-crop-simple"></i>
                 <h2>Full Stack Web Development</h2>
                 <p>提供完整的網頁應用程式開發服務，從前端 HTML/JavaScript 到後端資料庫設計。熟悉現代網頁開發技術與框架，能夠建立響應式、用戶友好的網站。</p>
                 <a href="#">Learn more</a>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <i class="fa-solid fa-cloud"></i>
                 <h2>IoT & Cloud Solutions</h2>
                 <p>專業的物聯網系統設計與雲端服務整合。具備 AWS IoT、EC2、RDS 的實務經驗，能夠建立從感測器到雲端的完整 IoT 解決方案。</p>
@@ -107,29 +157,47 @@
 <!-- --------portfolio------- -->
 <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">My Work</h1>
+        <h1 class="sub-title" data-aos="fade-up" data-aos-duration="800">My Work</h1>
         <div class="work-list">
-            <div class="work">
+            <div class="work" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
                 <img src="images/work-1.png">
                 <div class="layer">
                     <h3>IoT Sensing System</h3>
                     <p>使用 RFID 和 LoRa 通信技術開發的物聯網感測系統，整合機器學習演算法進行數據分析。這個專案展示了我在嵌入式系統、無線通信與數據處理方面的技術能力。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C/C++</span>
+                        <span class="tech-tag">RFID</span>
+                        <span class="tech-tag">LoRa</span>
+                        <span class="tech-tag">ML</span>
+                    </div>
                     <a href="#"><i class="fa-solid fa-external-link"></i></a>
                 </div>
             </div>
-            <div class="work">
+            <div class="work" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                 <img src="images/work-2.png">
                 <div class="layer">
                     <h3>AWS Cloud Integration</h3>
                     <p>整合 AWS IoT、EC2 和 RDS 服務的雲端解決方案。包含數據收集、處理和視覺化功能，展現了我在雲端架構設計與實作方面的專業能力。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AWS IoT</span>
+                        <span class="tech-tag">EC2</span>
+                        <span class="tech-tag">RDS</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
                     <a href="#"><i class="fa-solid fa-external-link"></i></a>
                 </div>
             </div>
-            <div class="work">
+            <div class="work" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
                 <img src="images/work-3.png">
                 <div class="layer">
                     <h3>Automation Testing Framework</h3>
                     <p>使用 Selenium 和 Python 開發的自動化測試框架，提高軟體品質與開發效率。包含 Web UI 測試、API 測試和報告生成功能。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">API Testing</span>
+                        <span class="tech-tag">CI/CD</span>
+                    </div>
                     <a href="#"><i class="fa-solid fa-external-link"></i></a>
                 </div>
             </div>
@@ -143,7 +211,7 @@
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
+                <h1 class="sub-title" data-aos="fade-up" data-aos-duration="800">Contact Me</h1>
                 <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i>0123456789</p>
                 <div class="social-icons">
@@ -206,6 +274,129 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     });
 });
 
+// 打字機效果
+function typeWriter() {
+    const texts = ['Chen From Taiwan', 'Software Engineer', 'IoT Developer', 'Full Stack Developer'];
+    const speed = 100;
+    const pauseTime = 2000;
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function type() {
+        const element = document.getElementById('typewriter');
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            element.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            element.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+        
+        let typeSpeed = isDeleting ? speed / 2 : speed;
+        
+        if (!isDeleting && charIndex === currentText.length) {
+            typeSpeed = pauseTime;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
+        
+        setTimeout(type, typeSpeed);
+    }
+    
+    type();
+}
+
+// 頁面載入時啟動打字機效果
+window.addEventListener('load', typeWriter);
+
+// 標籤頁切換功能
+function opentab(tabname, event) {
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    for(var tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(var tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    
+    // 如果是技能標籤，啟動進度條動畫
+    if (tabname === 'skills') {
+        animateSkillBars();
+    }
+}
+
+// 技能進度條動畫
+function animateSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    skillBars.forEach(bar => {
+        const skillLevel = bar.getAttribute('data-skill');
+        setTimeout(() => {
+            bar.style.width = skillLevel;
+        }, 200);
+    });
+}
+
+// 頁面載入時啟動技能條動畫
+window.addEventListener('load', () => {
+    setTimeout(animateSkillBars, 1000);
+    setTimeout(animateStats, 1500);
+});
+
+// 統計數字動畫
+function animateStats() {
+    const statsNumbers = document.querySelectorAll('.stat-number');
+    
+    statsNumbers.forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-target'));
+        const increment = target / 50;
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                stat.textContent = target + '+';
+                clearInterval(timer);
+            } else {
+                stat.textContent = Math.floor(current);
+            }
+        }, 50);
+    });
+}
+
+// 滾動觸發統計動畫
+function checkStatsInView() {
+    const statsContainer = document.querySelector('.stats-container');
+    if (statsContainer) {
+        const rect = statsContainer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top < windowHeight && rect.bottom > 0) {
+            animateStats();
+            window.removeEventListener('scroll', checkStatsInView);
+        }
+    }
+}
+
+window.addEventListener('scroll', checkStatsInView);
+
+
+// AOS Animation 初始化
+AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 100
+});
 
 // 側邊菜單開關
 var sidemenu = document.getElementById("sidemenu");
@@ -217,6 +408,27 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right = "-200px";
 }
+
+// 導航高亮效果
+window.addEventListener('scroll', function() {
+    let current = '';
+    const sections = document.querySelectorAll('div[id]');
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 200;
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    const menuLinks = document.querySelectorAll('nav ul li a');
+    menuLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
 </script>
 
 </body>
