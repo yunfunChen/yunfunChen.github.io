@@ -1187,6 +1187,98 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
     .copyright{
         font-size: 14px;
     }
+    
+    /* GitHub Activity Mobile Fixes */
+    .github-info{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .github-details h3{
+        font-size: 20px;
+    }
+    
+    .github-details p{
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .github-metrics{
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .metric span{
+        font-size: 20px;
+    }
+    
+    .repos-grid{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .repo-card{
+        padding: 15px;
+    }
+    
+    .repo-name{
+        font-size: 16px;
+    }
+    
+    .repo-description{
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .repo-stats{
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 11px;
+    }
+    
+    /* Tech Stack Mobile */
+    .tech-categories{
+        gap: 20px;
+    }
+    
+    .tech-icons{
+        gap: 15px;
+    }
+    
+    .tech-icon{
+        min-width: 70px;
+        padding: 12px;
+    }
+    
+    .tech-icon i{
+        font-size: 24px;
+    }
+    
+    .tech-icon span{
+        font-size: 10px;
+    }
+    
+    /* Stats Container Mobile */
+    .stats-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-item{
+        padding: 12px;
+    }
+    
+    .stat-number{
+        font-size: 28px;
+    }
+    
+    .stat-label{
+        font-size: 11px;
+    }
 }
 #msg{
     color: #61b752;
