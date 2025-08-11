@@ -1,3 +1,34 @@
+/* CSS Variables for Theme Management */
+:root {
+    --primary-bg: #080808;
+    --secondary-bg: #0a0a0a;
+    --tertiary-bg: #111;
+    --card-bg: #262626;
+    --card-bg-alt: #1e1e1e;
+    --text-primary: #fff;
+    --text-secondary: #ababab;
+    --accent-color: #ff004f;
+    --accent-gradient: linear-gradient(45deg, #ff004f, #ff6b9d);
+    --border-color: rgba(255, 255, 255, 0.05);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --overlay-bg: rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="light"] {
+    --primary-bg: #ffffff;
+    --secondary-bg: #f8f9fa;
+    --tertiary-bg: #e9ecef;
+    --card-bg: #ffffff;
+    --card-bg-alt: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --accent-color: #dc3545;
+    --accent-gradient: linear-gradient(45deg, #dc3545, #e83e8c);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --overlay-bg: rgba(255, 255, 255, 0.95);
+}
+
 *{
     margin: 0;
     padding: 0%;
@@ -10,15 +41,109 @@ html{
 
 /* 導航高亮效果 */
 nav ul li a.active{
-    color: #ff004f;
+    color: var(--accent-color);
 }
 
 nav ul li a.active::after{
     width: 100%;
 }
 body{
-    background: #080808;
-    color: #fff;
+    background: var(--primary-bg);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Loading Screen */
+.loading-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.fade-out{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-content{
+    text-align: center;
+    max-width: 300px;
+}
+
+.loading-logo{
+    margin-bottom: 30px;
+    animation: pulse 2s infinite;
+}
+
+.loading-logo-img{
+    width: 120px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7290%) hue-rotate(318deg) brightness(95%) contrast(105%);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.loading-spinner{
+    margin: 20px 0;
+}
+
+.spinner{
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 0, 79, 0.1);
+    border-top: 3px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text{
+    margin: 20px 0;
+}
+
+.loading-text-content{
+    color: var(--text-secondary);
+    font-size: 14px;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.loading-progress{
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 0, 79, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar{
+    height: 100%;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.3s ease;
 }
 #header{
     width: 100%;
@@ -47,17 +172,44 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #fff;
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-li{
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle-btn{
+    background: var(--accent-gradient);
+    border: none;
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.theme-toggle-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.3);
 }
 
 nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: var(--accent-color);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -75,24 +227,25 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #ff004f;
+    color: var(--accent-color);
 }
 
 #typewriter{
-    border-right: 2px solid #ff004f;
+    border-right: 2px solid var(--accent-color);
     animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    0%, 50% { border-color: #ff004f; }
+    0%, 50% { border-color: var(--accent-color); }
     51%, 100% { border-color: transparent; }
 }
 
 /*---about----*/
 #about{
     padding: 80px 0;
-    color: #ababab;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: var(--text-secondary);
+    background: linear-gradient(135deg, var(--secondary-bg), var(--tertiary-bg));
+    transition: all 0.3s ease;
 }
 .row{
     display: flex;
@@ -120,7 +273,8 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
 }
 
 /* 統計數據樣式 */
@@ -149,15 +303,17 @@ nav ul li a:hover::after{
 .stat-number{
     font-size: 32px;
     font-weight: 700;
-    color: #ff004f;
+    color: var(--accent-color);
     margin-bottom: 5px;
+    transition: color 0.3s ease;
 }
 
 .stat-label{
     font-size: 12px;
-    color: #ababab;
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
 /* 技術堆疊視覺化 */
@@ -807,11 +963,66 @@ nav ul li a:hover::after{
     color: #fff;
 }
 
+/* Scroll Progress Bar */
+.scroll-progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.progress-bar-scroll{
+    height: 100%;
+    background: var(--accent-gradient);
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+/* Back to Top Button */
+.back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gradient);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(255, 0, 79, 0.3);
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.back-to-top.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 0, 79, 0.4);
+}
+
+.back-to-top:active{
+    transform: translateY(-1px) scale(0.95);
+}
+
 /* ------contact------- */
 #contact{
     padding: 80px 0;
-    color: #ababab;
-    background: linear-gradient(135deg, #0a0a0a, #111);
+    color: var(--text-secondary);
+    background: linear-gradient(135deg, var(--secondary-bg), var(--tertiary-bg));
+    transition: all 0.3s ease;
 }
 
 .contact-left{
@@ -884,6 +1095,39 @@ nav .fa-solid{
     display: none;
 }
 
+/* Focus Styles for Accessibility */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 4px;
+}
+
+.skip-to-content:focus {
+    top: 6px;
+}
+
+/* Improve text contrast in light mode */
+[data-theme="light"] .tech-icon span {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .modal {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile Responsive */
 @media only screen and (max-width: 600px) {
     #header{
         background-image: url(images/phone-background_chen.png);

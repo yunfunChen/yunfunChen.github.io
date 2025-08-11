@@ -1,29 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website - yunfan</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Tina Chen | Software Engineer | IoT & Cloud Development Portfolio</title>
+    <meta name="description" content="Tina Chen (陳韻帆) - Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions. Master's in Computer Science from NTNU. View my portfolio of C/C++, Python, and cloud integration projects.">
+    <meta name="keywords" content="Software Engineer, IoT Developer, Embedded Systems, AWS Cloud, C/C++, Python, JavaScript, Portfolio, Tina Chen, 陳韻帆">
+    <meta name="author" content="Tina Chen">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://yunfunchen.github.io/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yunfunchen.github.io/">
+    <meta property="og:title" content="Tina Chen | Software Engineer Portfolio">
+    <meta property="og:description" content="Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions. Explore my technical projects and professional experience.">
+    <meta property="og:image" content="https://yunfunchen.github.io/images/user_chen.png">
+    <meta property="og:site_name" content="Tina Chen Portfolio">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yunfunchen.github.io/">
+    <meta property="twitter:title" content="Tina Chen | Software Engineer Portfolio">
+    <meta property="twitter:description" content="Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions.">
+    <meta property="twitter:image" content="https://yunfunchen.github.io/images/user_chen.png">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#ff004f">
+    <meta name="msapplication-TileColor" content="#ff004f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/bb7640ae82.js" crossorigin="anonymous"></script>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tina Chen",
+        "alternateName": "陳韻帆",
+        "jobTitle": "Software Engineer",
+        "description": "Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions",
+        "url": "https://yunfunchen.github.io/",
+        "image": "https://yunfunchen.github.io/images/user_chen.png",
+        "sameAs": [
+            "https://github.com/yunfunChen",
+            "https://www.linkedin.com/in/韻帆-陳-793241168/"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "National Taiwan Normal University",
+            "description": "Master's Degree in Computer Science"
+        },
+        "knowsAbout": ["C/C++", "Python", "JavaScript", "Java", "AWS", "IoT", "Embedded Systems", "Machine Learning"],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Software Engineer",
+            "occupationalCategory": "Computer Programming"
+        }
+    }
+    </script>
+    
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+<!-- Skip to content for accessibility -->
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<!-- Loading Screen -->
+<div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+        <div class="loading-logo">
+            <img src="images/logo_chen.png" alt="Loading..." class="loading-logo-img">
+        </div>
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+        </div>
+        <div class="loading-text">
+            <span class="loading-text-content">Loading Portfolio...</span>
+        </div>
+        <div class="loading-progress">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+</div>
 <div id="header">
     <div class="container">
-        <nav>
-            <img src="images/logo_chen.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#github-activity">GitHub</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav role="navigation" aria-label="Main navigation">
+            <img src="images/logo_chen.png" class="logo" alt="Tina Chen Logo">
+            <ul id="sidemenu" role="menubar">
+                <li role="none"><a href="#header" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#portfolio" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="#github-activity" role="menuitem">GitHub</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                <li class="theme-toggle-li">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                        <i class="fa-solid fa-moon" id="theme-icon"></i>
+                    </button>
+                </li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -36,11 +119,12 @@
 </div>
 
 <!-- --------about-------> 
+<main id="main-content">
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1" data-aos="fade-right" data-aos-duration="1000">
-                <img src="images/user_chen.png">
+                <img src="images/user_chen.png" alt="Tina Chen - Software Engineer Profile Photo">
             </div>
             <div class="about-col-2" data-aos="fade-left" data-aos-duration="1000">
                 <h1 class="sub-title">About Me</h1>
@@ -361,6 +445,16 @@
         </div>
     </div>
 </div>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress">
+    <div class="progress-bar-scroll" id="scroll-progress-bar"></div>
+</div>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
 
 <!-- --------contact------- -->
 <div id="contact">
@@ -719,6 +813,94 @@ window.addEventListener('click', function(event) {
     }
 });
 
+// 深色模式切換功能
+function initTheme() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+    
+    // 從 localStorage 載入主題偏好
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    
+    if (savedTheme === 'light') {
+        body.setAttribute('data-theme', 'light');
+        themeIcon.className = 'fa-solid fa-sun';
+    } else {
+        body.removeAttribute('data-theme');
+        themeIcon.className = 'fa-solid fa-moon';
+    }
+    
+    // 主題切換事件監聽器
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = body.getAttribute('data-theme');
+        
+        if (currentTheme === 'light') {
+            // 切換到深色模式
+            body.removeAttribute('data-theme');
+            themeIcon.className = 'fa-solid fa-moon';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            // 切換到淺色模式
+            body.setAttribute('data-theme', 'light');
+            themeIcon.className = 'fa-solid fa-sun';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+}
+
+// 頁面載入時初始化主題
+window.addEventListener('DOMContentLoaded', initTheme);
+
+// 載入畫面控制
+function initLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const progressBar = document.getElementById('progress-bar');
+    const loadingText = document.querySelector('.loading-text-content');
+    
+    const loadingSteps = [
+        { progress: 20, text: 'Loading assets...' },
+        { progress: 40, text: 'Initializing components...' },
+        { progress: 60, text: 'Loading GitHub data...' },
+        { progress: 80, text: 'Setting up animations...' },
+        { progress: 100, text: 'Almost ready...' }
+    ];
+    
+    let currentStep = 0;
+    
+    function updateProgress() {
+        if (currentStep < loadingSteps.length) {
+            const step = loadingSteps[currentStep];
+            progressBar.style.width = step.progress + '%';
+            loadingText.textContent = step.text;
+            currentStep++;
+            
+            setTimeout(updateProgress, 400 + Math.random() * 200);
+        } else {
+            // 完成載入
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    // 啟動其他動畫和功能
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 300);
+        }
+    }
+    
+    // 延遲開始載入動畫
+    setTimeout(updateProgress, 500);
+}
+
+// 頁面載入完成後啟動載入畫面
+window.addEventListener('load', () => {
+    initLoadingScreen();
+    setTimeout(typeWriter, 2000);
+    setTimeout(animateSkillBars, 2500);
+    setTimeout(animateStats, 3000);
+    setTimeout(loadGitHubData, 3500);
+});
+
 
 // AOS Animation 初始化
 AOS.init({
@@ -739,14 +921,33 @@ function closemenu(){
     sidemenu.style.right = "-200px";
 }
 
-// 導航高亮效果
-window.addEventListener('scroll', function() {
+// 滾動事件處理器 - 整合多個功能
+function handleScrollEffects() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    
+    // 更新滾動進度條
+    const scrollProgressBar = document.getElementById('scroll-progress-bar');
+    if (scrollProgressBar) {
+        scrollProgressBar.style.width = scrollPercent + '%';
+    }
+    
+    // 顯示/隱藏回到頂部按鈕
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (scrollTop > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+    
+    // 導航高亮效果
     let current = '';
     const sections = document.querySelectorAll('div[id]');
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 200;
-        if (pageYOffset >= sectionTop) {
+        if (scrollTop >= sectionTop) {
             current = section.getAttribute('id');
         }
     });
@@ -758,8 +959,27 @@ window.addEventListener('scroll', function() {
             link.classList.add('active');
         }
     });
-});
+}
+
+// 回到頂部功能
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// 統一的滾動事件監聽器
+window.addEventListener('scroll', handleScrollEffects);
+
+// 初始化回到頂部按鈕
+window.addEventListener('DOMContentLoaded', initBackToTop);
 </script>
+</main>
 
 </body>
 </html>
