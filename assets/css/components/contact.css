@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Contact Section Component
+   ========================================================================== */
+
+.contact-content {
+  align-items: start;
+  gap: var(--space-12);
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.contact-item:hover {
+  border-color: var(--primary-300);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-100), var(--primary-200));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  font-size: 20px;
+  color: var(--primary-500);
+}
+
+.contact-details h4 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.contact-details p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+}
+
+.social-link {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 20px;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: var(--primary-500);
+  border-color: var(--primary-500);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  background: var(--bg-secondary);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: var(--space-4);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: var(--text-base);
+  transition: all var(--transition-fast);
+  resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-message {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-medium);
+  text-align: center;
+  display: none;
+}
+
+.form-message.success {
+  background: rgba(5, 150, 105, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  display: block;
+}
+
+.form-message.error {
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--error);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  display: block;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .contact-icon {
+  background: linear-gradient(135deg, var(--primary-900), var(--primary-800));
+}
+
+[data-theme="dark"] .contact-icon i {
+  color: var(--primary-300);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .contact-form-wrapper {
+    padding: var(--space-6);
+  }
+  
+  .contact-item {
+    padding: var(--space-4);
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .form-input,
+  .form-textarea {
+    min-height: 48px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .contact-icon i {
+    font-size: 16px;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}

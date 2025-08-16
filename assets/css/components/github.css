@@ -1,0 +1,208 @@
+/* ==========================================================================
+   GitHub Section Component
+   ========================================================================== */
+
+.github-stats {
+  margin-bottom: var(--space-12);
+}
+
+.github-profile {
+  background: var(--bg-secondary);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  transition: all var(--transition-fast);
+}
+
+.github-profile:hover {
+  border-color: var(--primary-300);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.github-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  border: 3px solid var(--primary-500);
+  transition: all var(--transition-fast);
+}
+
+.avatar-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 102, 204, 0.3);
+}
+
+.github-info {
+  flex: 1;
+}
+
+.github-info h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.github-info p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-relaxed);
+}
+
+.github-metrics {
+  display: flex;
+  gap: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric span {
+  display: block;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--primary-500);
+  margin-bottom: var(--space-1);
+}
+
+.metric label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: var(--font-medium);
+}
+
+/* GitHub Repositories */
+.github-repos h3 {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.repos-grid {
+  margin-top: var(--space-8);
+}
+
+.repo-card {
+  background: var(--bg-secondary);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-card:hover {
+  border-color: var(--primary-300);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.repo-name {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--primary-500);
+  text-decoration: none;
+  margin-bottom: var(--space-3);
+  transition: color var(--transition-fast);
+}
+
+.repo-name:hover {
+  color: var(--primary-600);
+  text-decoration: underline;
+}
+
+.repo-description {
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+  flex: 1;
+  font-size: var(--text-sm);
+}
+
+.repo-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.repo-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.repo-language {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-400);
+  display: inline-block;
+}
+
+/* Loading state */
+.github-loading {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--text-secondary);
+}
+
+.github-error {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--error);
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: var(--radius-lg);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .github-profile {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-6);
+  }
+  
+  .avatar-img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .github-metrics {
+    justify-content: center;
+    gap: var(--space-6);
+  }
+  
+  .metric span {
+    font-size: var(--text-xl);
+  }
+  
+  .repos-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .repo-card {
+    padding: var(--space-4);
+  }
+}

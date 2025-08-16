@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Services Section Component
+   ========================================================================== */
+
+.services-grid {
+  margin-top: var(--space-12);
+}
+
+.service-card {
+  background: var(--bg-secondary);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-300);
+}
+
+.service-card:hover::before {
+  left: 100%;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-100), var(--primary-200));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-6);
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover .service-icon {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  transform: scale(1.1);
+}
+
+.service-icon i {
+  font-size: 32px;
+  color: var(--primary-500);
+  transition: color var(--transition-fast);
+}
+
+.service-card:hover .service-icon i {
+  color: white;
+}
+
+.service-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.service-description {
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 0;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .service-icon {
+  background: linear-gradient(135deg, var(--primary-900), var(--primary-800));
+}
+
+[data-theme="dark"] .service-icon i {
+  color: var(--primary-300);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .service-card {
+    padding: var(--space-6);
+  }
+  
+  .service-icon {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .service-icon i {
+    font-size: 24px;
+  }
+}

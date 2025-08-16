@@ -1,43 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- SEO Meta Tags -->
+    <!-- Primary Meta Tags -->
     <title>Tina Chen | Software Engineer | IoT & Cloud Development Portfolio</title>
-    <meta name="description" content="Tina Chen (陳韻帆) - Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions. Master's in Computer Science from NTNU. View my portfolio of C/C++, Python, and cloud integration projects.">
+    <meta name="title" content="Tina Chen | Software Engineer | IoT & Cloud Development Portfolio">
+    <meta name="description" content="Tina Chen (陳韻帆) - Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions. Master's in Computer Science from NTNU.">
     <meta name="keywords" content="Software Engineer, IoT Developer, Embedded Systems, AWS Cloud, C/C++, Python, JavaScript, Portfolio, Tina Chen, 陳韻帆">
     <meta name="author" content="Tina Chen">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
     <link rel="canonical" href="https://yunfunchen.github.io/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yunfunchen.github.io/">
     <meta property="og:title" content="Tina Chen | Software Engineer Portfolio">
-    <meta property="og:description" content="Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions. Explore my technical projects and professional experience.">
-    <meta property="og:image" content="https://yunfunchen.github.io/images/user_chen.png">
+    <meta property="og:description" content="Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions.">
+    <meta property="og:image" content="https://yunfunchen.github.io/assets/images/user_chen.png">
     <meta property="og:site_name" content="Tina Chen Portfolio">
-    
+
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yunfunchen.github.io/">
-    <meta property="twitter:title" content="Tina Chen | Software Engineer Portfolio">
-    <meta property="twitter:description" content="Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions.">
-    <meta property="twitter:image" content="https://yunfunchen.github.io/images/user_chen.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yunfunchen.github.io/">
+    <meta name="twitter:title" content="Tina Chen | Software Engineer Portfolio">
+    <meta name="twitter:description" content="Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions.">
+    <meta name="twitter:image" content="https://yunfunchen.github.io/assets/images/user_chen.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#ff004f">
-    <meta name="msapplication-TileColor" content="#ff004f">
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0066cc">
+    <meta name="msapplication-TileColor" content="#0066cc">
+    
+    <!-- Apple Touch Icon -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="https://kit.fontawesome.com/bb7640ae82.js" crossorigin="anonymous"></script>
-    <!-- JSON-LD Structured Data -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -47,7 +56,7 @@
         "jobTitle": "Software Engineer",
         "description": "Experienced Software Engineer specializing in embedded systems, IoT development, and AWS cloud solutions",
         "url": "https://yunfunchen.github.io/",
-        "image": "https://yunfunchen.github.io/images/user_chen.png",
+        "image": "https://yunfunchen.github.io/assets/images/user_chen.png",
         "sameAs": [
             "https://github.com/yunfunChen",
             "https://www.linkedin.com/in/韻帆-陳-793241168/"
@@ -65,921 +74,596 @@
         }
     }
     </script>
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-<!-- Skip to content for accessibility -->
-<a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-<!-- Loading Screen -->
-<div id="loading-screen" class="loading-screen">
-    <div class="loading-content">
-        <div class="loading-logo">
-            <img src="images/logo_chen.png" alt="Loading..." class="loading-logo-img">
-        </div>
-        <div class="loading-spinner">
-            <div class="spinner"></div>
-        </div>
-        <div class="loading-text">
-            <span class="loading-text-content">Loading Portfolio...</span>
-        </div>
-        <div class="loading-progress">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-    </div>
-</div>
-<div id="header">
-    <div class="container">
-        <nav role="navigation" aria-label="Main navigation">
-            <img src="images/logo_chen.png" class="logo" alt="Tina Chen Logo">
-            <ul id="sidemenu" role="menubar">
-                <li role="none"><a href="#header" role="menuitem">Home</a></li>
-                <li role="none"><a href="#about" role="menuitem">About</a></li>
-                <li role="none"><a href="#services" role="menuitem">Services</a></li>
-                <li role="none"><a href="#portfolio" role="menuitem">Portfolio</a></li>
-                <li role="none"><a href="#github-activity" role="menuitem">GitHub</a></li>
-                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
-                <li class="theme-toggle-li">
-                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-                        <i class="fa-solid fa-moon" id="theme-icon"></i>
-                    </button>
-                </li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>Programming Designer</p>
-            <h1>Hi, I'm <span>Tina</span><br><span id="typewriter"></span></h1>
-        </div>
-    </div>
-</div>
-
-<!-- --------about-------> 
-<main id="main-content">
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1" data-aos="fade-right" data-aos-duration="1000">
-                <img src="images/user_chen.png" alt="Tina Chen - Software Engineer Profile Photo">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="assets/images/logo_chen.png" alt="Loading..." class="loading-logo-img">
             </div>
-            <div class="about-col-2" data-aos="fade-left" data-aos-duration="1000">
-                <h1 class="sub-title">About Me</h1>
-                <p>I'm Tina Chen (陳韻帆), a passionate software engineer specializing in embedded systems and IoT development. With a Master's degree in Computer Science from National Taiwan Normal University, I bring hands-on experience in firmware engineering, cloud integration, and full-stack development. My expertise spans from low-level C/C++ programming to cloud architectures using AWS services. I'm passionate about creating innovative solutions that bridge hardware and software, turning complex technical challenges into elegant, scalable systems.</p>
+            <div class="loading-spinner">
+                <div class="spinner" role="status" aria-label="Loading"></div>
+            </div>
+            <div class="loading-text">
+                <span class="loading-text-content">Loading Portfolio...</span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <a href="#header" class="nav-logo">
+                <img src="assets/images/logo_chen.png" alt="Tina Chen Logo" class="logo">
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="#header" class="nav-link" role="menuitem" data-i18n="nav.home">Home</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#about" class="nav-link" role="menuitem" data-i18n="nav.about">About</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#services" class="nav-link" role="menuitem" data-i18n="nav.services">Services</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#portfolio" class="nav-link" role="menuitem" data-i18n="nav.portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#github" class="nav-link" role="menuitem" data-i18n="nav.github">GitHub</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#contact" class="nav-link" role="menuitem" data-i18n="nav.contact">Contact</a>
+                    </li>
+                </ul>
                 
-                <!-- 統計數據區塊 -->
-                <div class="stats-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="4">0</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="15">0</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="5">0</div>
-                        <div class="stat-label">Technologies Mastered</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="3">0</div>
-                        <div class="stat-label">Companies Worked</div>
-                    </div>
+                <button class="nav-close" id="nav-close" aria-label="Close navigation menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fas fa-moon dark-icon"></i>
+                    <i class="fas fa-sun light-icon"></i>
+                </button>
+                
+                <button class="language-toggle" id="language-toggle" aria-label="Switch language">
+                    <span class="lang-text">EN</span>
+                </button>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="hero container">
+            <div class="hero-content">
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Software Engineer</p>
+                <h1 class="hero-title">
+                    <span data-i18n="hero.title.prefix">Hi, I'm</span> <span class="text-brand" data-i18n="hero.title.name">Tina</span><br>
+                    <span id="typewriter" class="typewriter" aria-live="polite"></span>
+                </h1>
+                <p class="hero-description" data-i18n="hero.description">
+                    Passionate about creating innovative solutions that bridge hardware and software, 
+                    specializing in IoT development and cloud architecture.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.btn.contact">Get In Touch</a>
+                    <a href="#portfolio" class="btn btn-outline" data-i18n="hero.btn.work">View My Work</a>
                 </div>
+            </div>
+        </div>
+    </header>
 
-                <!-- 技術堆疊視覺化 -->
-                <div class="tech-stack-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-                    <h3 class="tech-title">Technology Stack</h3>
-                    <div class="tech-categories">
-                        <div class="tech-category">
-                            <h4>Languages</h4>
-                            <div class="tech-icons">
-                                <div class="tech-icon" data-tech="C/C++">
-                                    <i class="fa-brands fa-c"></i>
-                                    <span>C/C++</span>
-                                </div>
-                                <div class="tech-icon" data-tech="Python">
-                                    <i class="fa-brands fa-python"></i>
-                                    <span>Python</span>
-                                </div>
-                                <div class="tech-icon" data-tech="JavaScript">
-                                    <i class="fa-brands fa-js"></i>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="tech-icon" data-tech="Java">
-                                    <i class="fa-brands fa-java"></i>
-                                    <span>Java</span>
-                                </div>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="about.title">About Me</h2>
+                    <p class="section-subtitle" data-i18n="about.subtitle">
+                        Get to know more about who I am, what I do, and my skills in software development
+                    </p>
+                </div>
+                
+                <div class="about-content grid grid-cols-2 gap-12">
+                    <div class="about-image">
+                        <img src="assets/images/user_chen.png" alt="Tina Chen - Software Engineer Profile Photo" class="profile-img">
+                    </div>
+                    
+                    <div class="about-info">
+                        <div class="about-text">
+                            <p>
+                                I'm Tina Chen (陳韻帆), a passionate software engineer specializing in embedded systems and IoT development. 
+                                With a Master's degree in Computer Science from National Taiwan Normal University, I bring hands-on experience 
+                                in firmware engineering, cloud integration, and full-stack development.
+                            </p>
+                            <p>
+                                My expertise spans from low-level C/C++ programming to cloud architectures using AWS services. 
+                                I'm passionate about creating innovative solutions that bridge hardware and software, 
+                                turning complex technical challenges into elegant, scalable systems.
+                            </p>
+                        </div>
+                        
+                        <!-- Stats -->
+                        <div class="stats-grid grid grid-cols-4 gap-4">
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="4">0</div>
+                                <div class="stat-label" data-i18n="about.stats.years">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="15">0</div>
+                                <div class="stat-label" data-i18n="about.stats.projects">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="5">0</div>
+                                <div class="stat-label" data-i18n="about.stats.technologies">Technologies</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="3">0</div>
+                                <div class="stat-label" data-i18n="about.stats.companies">Companies</div>
                             </div>
                         </div>
                         
-                        <div class="tech-category">
-                            <h4>Cloud & DevOps</h4>
-                            <div class="tech-icons">
-                                <div class="tech-icon" data-tech="AWS">
-                                    <i class="fa-brands fa-aws"></i>
-                                    <span>AWS</span>
+                        <!-- Skills Tabs -->
+                        <div class="skills-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="skills" data-i18n="about.tab.skills">Skills</button>
+                                <button class="tab-btn" data-tab="experience" data-i18n="about.tab.experience">Experience</button>
+                                <button class="tab-btn" data-tab="education" data-i18n="about.tab.education">Education</button>
+                            </div>
+                            
+                            <div class="tab-content active" id="skills-tab">
+                                <div class="skills-section">
+                                    <h4 class="skills-category-title">主要技術棧</h4>
+                                    <div class="skills-grid grid grid-cols-1 gap-4">
+                                        <div class="skill-card">
+                                            <div class="skill-icon">
+                                                <i class="fab fa-cuttlefish"></i>
+                                            </div>
+                                            <div class="skill-content">
+                                                <h5 class="skill-name">C/C++</h5>
+                                                <p class="skill-description" data-i18n="skill.cpp">IoT感測系統與嵌入式開發</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="skill-card">
+                                            <div class="skill-icon">
+                                                <i class="fab fa-python"></i>
+                                            </div>
+                                            <div class="skill-content">
+                                                <h5 class="skill-name">Python</h5>
+                                                <p class="skill-description" data-i18n="skill.python">測試自動化與數據處理工具</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="skill-card">
+                                            <div class="skill-icon">
+                                                <i class="fab fa-js"></i>
+                                            </div>
+                                            <div class="skill-content">
+                                                <h5 class="skill-name">JavaScript</h5>
+                                                <p class="skill-description" data-i18n="skill.javascript">響應式網頁應用開發</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="skill-card">
+                                            <div class="skill-icon">
+                                                <i class="fab fa-java"></i>
+                                            </div>
+                                            <div class="skill-content">
+                                                <h5 class="skill-name">Java</h5>
+                                                <p class="skill-description" data-i18n="skill.java">企業表單與報告系統開發</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h4 class="skills-category-title">雲端與工具</h4>
+                                    <div class="skills-grid grid grid-cols-1 gap-4">
+                                        <div class="skill-card">
+                                            <div class="skill-icon">
+                                                <i class="fab fa-aws"></i>
+                                            </div>
+                                            <div class="skill-content">
+                                                <h5 class="skill-name">AWS Cloud</h5>
+                                                <p class="skill-description">IoT雲端架構整合</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="skill-card">
+                                            <div class="skill-icon">
+                                                <i class="fab fa-linux"></i>
+                                            </div>
+                                            <div class="skill-content">
+                                                <h5 class="skill-name">Linux Systems</h5>
+                                                <p class="skill-description">嵌入式系統管理</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="skill-card">
+                                            <div class="skill-icon">
+                                                <i class="fab fa-git-alt"></i>
+                                            </div>
+                                            <div class="skill-content">
+                                                <h5 class="skill-name">Git</h5>
+                                                <p class="skill-description">版本控制與團隊協作</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="skill-card">
+                                            <div class="skill-icon">
+                                                <i class="fas fa-database"></i>
+                                            </div>
+                                            <div class="skill-content">
+                                                <h5 class="skill-name">PostgreSQL/MySQL</h5>
+                                                <p class="skill-description">資料庫設計與管理</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tech-icon" data-tech="Git">
-                                    <i class="fa-brands fa-git-alt"></i>
-                                    <span>Git</span>
+                            </div>
+                            
+                            <div class="tab-content" id="experience-tab">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <h4>Firmware Engineer</h4>
+                                            <p class="company">etenTech • 2020</p>
+                                            <p class="description">
+                                                Developed embedded Linux systems using C/C++ and Git, performed packet analysis 
+                                                with Wireshark/Postman, and created automation solutions with Shell scripting.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker"></div>
+                                        <div class="timeline-content">
+                                            <h4>Software Development Intern</h4>
+                                            <p class="company">DHL Air Freight IT Department • 2019</p>
+                                            <p class="description">
+                                                Developed form applications and billing reports using Java and XML technologies 
+                                                for logistics management systems.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tech-icon" data-tech="Linux">
-                                    <i class="fa-brands fa-linux"></i>
-                                    <span>Linux</span>
+                            </div>
+                            
+                            <div class="tab-content" id="education-tab">
+                                <div class="education-list">
+                                    <div class="education-item">
+                                        <h4>Master's Degree in Computer Science</h4>
+                                        <p class="university">National Taiwan Normal University</p>
+                                        <p class="period">2022 - 2024</p>
+                                        <p class="description">
+                                            Advanced studies in software engineering, machine learning, and distributed systems.
+                                        </p>
+                                    </div>
+                                    <div class="education-item">
+                                        <h4>Bachelor's Degree in Computer Science</h4>
+                                        <p class="university">Tatung University</p>
+                                        <p class="period">2015 - 2019</p>
+                                        <p class="description">
+                                            Foundation in computer programming, database systems, and computer networks.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="tech-icon" data-tech="Docker">
-                                    <i class="fa-brands fa-docker"></i>
-                                    <span>Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="services.title">My Services</h2>
+                    <p class="section-subtitle" data-i18n="services.subtitle">
+                        Professional software development services across multiple domains
+                    </p>
+                </div>
+                
+                <div class="services-grid grid grid-auto-fit gap-8">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.embedded.title">Embedded Systems Development</h3>
+                        <p class="service-description">
+                            Specialized in embedded Linux systems development using C/C++ for firmware design. 
+                            Extensive experience in hardware-software integration for high-performance, stable embedded solutions.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.fullstack.title">Full Stack Web Development</h3>
+                        <p class="service-description">
+                            Complete web application development services from frontend to backend database design. 
+                            Proficient in modern web technologies and frameworks for responsive, user-friendly websites.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="service-title" data-i18n="services.iot.title">IoT & Cloud Solutions</h3>
+                        <p class="service-description">
+                            Professional IoT system design and cloud service integration. Hands-on experience with 
+                            AWS IoT, EC2, RDS for building complete sensor-to-cloud IoT solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="portfolio.title">My Work</h2>
+                    <p class="section-subtitle" data-i18n="portfolio.subtitle">
+                        A showcase of my recent projects and technical achievements
+                    </p>
+                </div>
+                
+                <!-- Portfolio Filter -->
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all" data-i18n="portfolio.filter.all">All Projects</button>
+                    <button class="filter-btn" data-filter="iot" data-i18n="portfolio.filter.iot">IoT</button>
+                    <button class="filter-btn" data-filter="web" data-i18n="portfolio.filter.web">Web Dev</button>
+                    <button class="filter-btn" data-filter="embedded" data-i18n="portfolio.filter.embedded">Embedded</button>
+                    <button class="filter-btn" data-filter="cloud" data-i18n="portfolio.filter.cloud">Cloud</button>
+                </div>
+                
+                <div class="portfolio-grid grid grid-auto-fit gap-8">
+                    <article class="portfolio-item" data-category="iot embedded">
+                        <div class="portfolio-image">
+                            <img src="assets/images/work-1.png" alt="IoT Sensing System">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3 class="portfolio-title">IoT Sensing System</h3>
+                                    <p class="portfolio-description">
+                                        RFID and LoRa communication technology integrated IoT sensing system with machine learning algorithms.
+                                    </p>
+                                    <div class="portfolio-tech">
+                                        <span class="tech-tag">C/C++</span>
+                                        <span class="tech-tag">RFID</span>
+                                        <span class="tech-tag">LoRa</span>
+                                        <span class="tech-tag">ML</span>
+                                    </div>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                                        <a href="https://github.com/yunfunChen/IoT-Sensing-System" class="btn btn-sm btn-outline" target="_blank">GitHub</a>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="cloud iot">
+                        <div class="portfolio-image">
+                            <img src="assets/images/work-2.png" alt="AWS Cloud Integration">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3 class="portfolio-title">AWS Cloud Integration</h3>
+                                    <p class="portfolio-description">
+                                        Comprehensive cloud architecture solution integrating AWS IoT, EC2, and RDS services.
+                                    </p>
+                                    <div class="portfolio-tech">
+                                        <span class="tech-tag">AWS IoT</span>
+                                        <span class="tech-tag">EC2</span>
+                                        <span class="tech-tag">RDS</span>
+                                        <span class="tech-tag">Python</span>
+                                    </div>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                                        <a href="https://github.com/yunfunChen/AWS-IoT-Cloud-Platform" class="btn btn-sm btn-outline" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="web embedded">
+                        <div class="portfolio-image">
+                            <img src="assets/images/work-3.png" alt="Automation Testing Framework">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3 class="portfolio-title">Automation Testing Framework</h3>
+                                    <p class="portfolio-description">
+                                        Enterprise-level automation testing framework using Selenium and Python.
+                                    </p>
+                                    <div class="portfolio-tech">
+                                        <span class="tech-tag">Selenium</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">API Testing</span>
+                                        <span class="tech-tag">CI/CD</span>
+                                    </div>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                                        <a href="https://github.com/yunfunChen/Automation-Testing-Framework" class="btn btn-sm btn-outline" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="portfolio-cta">
+                    <a href="https://github.com/yunfunChen?tab=repositories" class="btn btn-primary" target="_blank">
+                        View More on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Section -->
+        <section id="github" class="section bg-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="github.title">GitHub Activity</h2>
+                    <p class="section-subtitle" data-i18n="github.subtitle">
+                        My latest contributions and open source projects
+                    </p>
+                </div>
+                
+                <div class="github-stats">
+                    <div class="github-profile">
+                        <div class="github-avatar">
+                            <img src="https://github.com/yunfunChen.png" alt="GitHub Profile" class="avatar-img">
+                        </div>
+                        <div class="github-info">
+                            <h3 id="github-name">yunfunChen</h3>
+                            <p id="github-bio">Loading...</p>
+                            <div class="github-metrics">
+                                <div class="metric">
+                                    <span id="repo-count">-</span>
+                                    <label>Repositories</label>
+                                </div>
+                                <div class="metric">
+                                    <span id="followers-count">-</span>
+                                    <label>Followers</label>
+                                </div>
+                                <div class="metric">
+                                    <span id="following-count">-</span>
+                                    <label>Following</label>
+                                </div>
+                            </div>
+                            <a href="https://github.com/yunfunChen" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="github-repos">
+                    <h3>Featured Repositories</h3>
+                    <div id="repos-grid" class="repos-grid grid grid-auto-fit gap-6">
+                        <!-- Repositories will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+                    <p class="section-subtitle" data-i18n="contact.subtitle">
+                        I'm always open to discussing new opportunities and interesting projects
+                    </p>
+                </div>
+                
+                <div class="contact-content grid grid-cols-2 gap-12">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.email">Email</h4>
+                                <p>t920280@gmail.com</p>
                             </div>
                         </div>
                         
-                        <div class="tech-category">
-                            <h4>Databases & Tools</h4>
-                            <div class="tech-icons">
-                                <div class="tech-icon" data-tech="PostgreSQL">
-                                    <i class="fa-solid fa-database"></i>
-                                    <span>PostgreSQL</span>
-                                </div>
-                                <div class="tech-icon" data-tech="MySQL">
-                                    <i class="fa-solid fa-database"></i>
-                                    <span>MySQL</span>
-                                </div>
-                                <div class="tech-icon" data-tech="Selenium">
-                                    <i class="fa-solid fa-robot"></i>
-                                    <span>Selenium</span>
-                                </div>
-                                <div class="tech-icon" data-tech="Arduino">
-                                    <i class="fa-solid fa-microchip"></i>
-                                    <span>Arduino</span>
-                                </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.location">Location</h4>
+                                <p>Taiwan</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
-                    <p class="tab-links" onclick="opentab('education', event)">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <div class="skill-item">
-                        <span class="skill-name">C/C++</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-skill="90%"></div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/yunfunChen" class="social-link" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/韻帆-陳-793241168/" class="social-link" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="social-link" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                         </div>
+                        
+                        <a href="assets/images/my-cv.pdf" class="btn btn-outline" download>
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Python</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-skill="85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">JavaScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-skill="80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Java</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-skill="75%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">AWS Cloud Services</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-skill="80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Linux Systems</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-skill="85%"></div>
-                        </div>
-                    </div>
-                </div>                
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2020 - 2020</span><br>Firmware Engineer at etenTech | Developed embedded Linux systems using C/C++ and Git, packet analysis with Wireshark/Postman, and automation with Shell scripting.</li>
-                        <li><span>2019 - 2019</span><br>Intern at DHL Air Freight IT Department | Developed form applications and billing reports using Java and XML.</li>
-                        <li><span>2018 - 2018</span><br>Test Engineer at ECS (Elitegroup Computer Systems) | Responsible for BIOS testing and writing test reports.</li>
-                        <li><span>2018 - 2019</span><br>Mechanical Engineer for Escape Room | Designed mechanical systems and sensors using Arduino.</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2022 - 2024 (Expected)</span><br>Master’s Degree in Computer Science | National Taiwan Normal University</li>
-                        <li><span>2015 - 2019</span><br>Bachelor’s Degree in Computer Science | University of Taipei</li>
-                    </ul>
-                </div>                
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- --------services------- -->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title" data-aos="fade-up" data-aos-duration="800">My Services</h1>
-        <div class="services-list">
-            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                <i class="fa-solid fa-code"></i>
-                <h2>Embedded Systems Development</h2>
-                <p>專精於嵌入式 Linux 系統開發，使用 C/C++ 進行韌體設計與開發。具備豐富的硬體與軟體整合經驗，能夠開發高效能、穩定的嵌入式解決方案。</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>Full Stack Web Development</h2>
-                <p>提供完整的網頁應用程式開發服務，從前端 HTML/JavaScript 到後端資料庫設計。熟悉現代網頁開發技術與框架，能夠建立響應式、用戶友好的網站。</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                <i class="fa-solid fa-cloud"></i>
-                <h2>IoT & Cloud Solutions</h2>
-                <p>專業的物聯網系統設計與雲端服務整合。具備 AWS IoT、EC2、RDS 的實務經驗，能夠建立從感測器到雲端的完整 IoT 解決方案。</p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- --------portfolio------- -->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title" data-aos="fade-up" data-aos-duration="800">My Work</h1>
-        <div class="work-list">
-            <div class="work" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-                <img src="images/work-1.png">
-                <div class="layer">
-                    <h3>IoT Sensing System</h3>
-                    <p>使用 RFID 和 LoRa 通信技術開發的物聯網感測系統，整合機器學習演算法進行數據分析。這個專案展示了我在嵌入式系統、無線通信與數據處理方面的技術能力。</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C/C++</span>
-                        <span class="tech-tag">RFID</span>
-                        <span class="tech-tag">LoRa</span>
-                        <span class="tech-tag">ML</span>
-                    </div>
-                    <a href="#" onclick="openProjectModal('iot-sensing')"><i class="fa-solid fa-external-link"></i></a>
-                </div>
-            </div>
-            <div class="work" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-                <img src="images/work-2.png">
-                <div class="layer">
-                    <h3>AWS Cloud Integration</h3>
-                    <p>整合 AWS IoT、EC2 和 RDS 服務的雲端解決方案。包含數據收集、處理和視覺化功能，展現了我在雲端架構設計與實作方面的專業能力。</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS IoT</span>
-                        <span class="tech-tag">EC2</span>
-                        <span class="tech-tag">RDS</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
-                    <a href="#" onclick="openProjectModal('aws-cloud')"><i class="fa-solid fa-external-link"></i></a>
-                </div>
-            </div>
-            <div class="work" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
-                <img src="images/work-3.png">
-                <div class="layer">
-                    <h3>Automation Testing Framework</h3>
-                    <p>使用 Selenium 和 Python 開發的自動化測試框架，提高軟體品質與開發效率。包含 Web UI 測試、API 測試和報告生成功能。</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Selenium</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">API Testing</span>
-                        <span class="tech-tag">CI/CD</span>
-                    </div>
-                    <a href="#" onclick="openProjectModal('automation-testing')"><i class="fa-solid fa-external-link"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn">See more</a>
-    </div>
-</div>
-
-<!-- --------github activity------- -->
-<div id="github-activity">
-    <div class="container">
-        <h1 class="sub-title" data-aos="fade-up" data-aos-duration="800">GitHub Activity</h1>
-        <div class="github-stats" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-            <div class="github-card">
-                <div class="github-info">
-                    <img src="https://github.com/yunfunChen.png" alt="GitHub Profile" class="github-avatar">
-                    <div class="github-details">
-                        <h3 id="github-name">yunfunChen</h3>
-                        <p id="github-bio">Loading...</p>
-                        <div class="github-metrics">
-                            <div class="metric">
-                                <span id="repo-count">-</span>
-                                <label>Repositories</label>
+                    
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" id="name" name="from_name" placeholder="Your Name" required class="form-input" data-i18n="contact.form.name">
                             </div>
-                            <div class="metric">
-                                <span id="followers-count">-</span>
-                                <label>Followers</label>
+                            
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" id="email" name="from_email" placeholder="Your Email" required class="form-input" data-i18n="contact.form.email">
                             </div>
-                            <div class="metric">
-                                <span id="following-count">-</span>
-                                <label>Following</label>
+                            
+                            <div class="form-group">
+                                <label for="message" class="sr-only">Message</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Your Message" required class="form-textarea" data-i18n="contact.form.message"></textarea>
                             </div>
-                        </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Sending...
+                                </span>
+                            </button>
+                        </form>
+                        <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
                     </div>
                 </div>
-                <a href="https://github.com/yunfunChen" target="_blank" class="github-link">
-                    <i class="fa-brands fa-github"></i> View on GitHub
-                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Tina Chen. Made with <i class="fas fa-heart text-error"></i> and modern web technologies.</p>
             </div>
         </div>
-        
-        <div class="github-repos" id="github-repos" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-            <h2>Featured Repositories</h2>
-            <div class="repos-grid" id="repos-grid">
-                <!-- Repositories will be loaded here -->
-            </div>
-        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-bar" id="scroll-progress-bar"></div>
     </div>
-</div>
 
-<!-- Project Modal -->
-<div id="project-modal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2 id="modal-title">Project Title</h2>
-            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
-        </div>
-        <div class="modal-body">
-            <div class="project-image">
-                <img id="modal-image" src="" alt="Project Image">
-            </div>
-            <div class="project-details">
-                <div class="project-description">
-                    <h3>Description</h3>
-                    <p id="modal-description">Project description will be loaded here...</p>
-                </div>
-                <div class="project-features">
-                    <h3>Key Features</h3>
-                    <ul id="modal-features">
-                        <!-- Features will be loaded here -->
-                    </ul>
-                </div>
-                <div class="project-technologies">
-                    <h3>Technologies Used</h3>
-                    <div id="modal-technologies" class="modal-tech-tags">
-                        <!-- Technologies will be loaded here -->
-                    </div>
-                </div>
-                <div class="project-links">
-                    <a id="modal-github-link" href="#" target="_blank" class="project-link">
-                        <i class="fa-brands fa-github"></i> View Code
-                    </a>
-                    <a id="modal-demo-link" href="#" target="_blank" class="project-link">
-                        <i class="fa-solid fa-external-link"></i> Live Demo
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Scroll Progress Bar -->
-<div class="scroll-progress">
-    <div class="progress-bar-scroll" id="scroll-progress-bar"></div>
-</div>
-
-<!-- Back to Top Button -->
-<button id="back-to-top" class="back-to-top" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<!-- --------contact------- -->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title" data-aos="fade-up" data-aos-duration="800">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>0123456789</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/%E9%9F%BB%E5%B8%86-%E9%99%B3-793241168/"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form id="contact-form" name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-    <div class="copyight">
-        <p>Copyright © Tina. Made with <i class="fa-solid fa-heart"></i> by Home</p>
-    </div>
-</div>
-
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(event){
-    event.preventDefault();
-
-    var formData = new FormData(this);
-    var data = {
-        "name": formData.get('Name'),
-        "email": formData.get('Email'),
-        "message": formData.get('Message')
-    };
-
-    var scriptUrl = "https://script.google.com/macros/s/AKfycbxZuAQS9D744d6KDUbrHEGeSBwczmR1JLVe2YYyOHZ6yGFdWr3z3WZAVrpNsxtbHcVYjg/exec";  // 用你的 Google Apps Script Web App URL 替換
-
-    fetch(scriptUrl, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json"
-        },
-        mode: 'cors'  // 設定為跨源請求
-    })
-    .then(response => response.json())  // 確保回應為 JSON 格式
-    .then(result => {
-        if(result.result === "success"){
-            document.getElementById('msg').textContent = "謝謝！您的訊息已成功發送。";
-            document.getElementById('contact-form').reset(); // 提交後重設表單
-        } else {
-            document.getElementById('msg').textContent = "發生錯誤：" + result.message;
-        }
-    })
-    .catch(error => {
-        document.getElementById('msg').textContent = "發生錯誤，請稍後再試。";
-        console.error("錯誤:", error);
-    });
-});
-
-// 打字機效果
-function typeWriter() {
-    const texts = ['Chen From Taiwan', 'Software Engineer', 'IoT Developer', 'Full Stack Developer'];
-    const speed = 100;
-    const pauseTime = 2000;
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    
-    function type() {
-        const element = document.getElementById('typewriter');
-        const currentText = texts[textIndex];
-        
-        if (isDeleting) {
-            element.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            element.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-        }
-        
-        let typeSpeed = isDeleting ? speed / 2 : speed;
-        
-        if (!isDeleting && charIndex === currentText.length) {
-            typeSpeed = pauseTime;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-        }
-        
-        setTimeout(type, typeSpeed);
-    }
-    
-    type();
-}
-
-// 頁面載入時啟動打字機效果
-window.addEventListener('load', typeWriter);
-
-// 標籤頁切換功能
-function opentab(tabname, event) {
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    
-    for(var tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
-    for(var tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-    
-    // 如果是技能標籤，啟動進度條動畫
-    if (tabname === 'skills') {
-        animateSkillBars();
-    }
-}
-
-// 技能進度條動畫
-function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    skillBars.forEach(bar => {
-        const skillLevel = bar.getAttribute('data-skill');
-        setTimeout(() => {
-            bar.style.width = skillLevel;
-        }, 200);
-    });
-}
-
-// 頁面載入時啟動技能條動畫
-window.addEventListener('load', () => {
-    setTimeout(animateSkillBars, 1000);
-    setTimeout(animateStats, 1500);
-});
-
-// 統計數字動畫
-function animateStats() {
-    const statsNumbers = document.querySelectorAll('.stat-number');
-    
-    statsNumbers.forEach(stat => {
-        const target = parseInt(stat.getAttribute('data-target'));
-        const increment = target / 50;
-        let current = 0;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                stat.textContent = target + '+';
-                clearInterval(timer);
-            } else {
-                stat.textContent = Math.floor(current);
-            }
-        }, 50);
-    });
-}
-
-// 滾動觸發統計動畫
-function checkStatsInView() {
-    const statsContainer = document.querySelector('.stats-container');
-    if (statsContainer) {
-        const rect = statsContainer.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        if (rect.top < windowHeight && rect.bottom > 0) {
-            animateStats();
-            window.removeEventListener('scroll', checkStatsInView);
-        }
-    }
-}
-
-window.addEventListener('scroll', checkStatsInView);
-
-// GitHub API 整合
-async function loadGitHubData() {
-    const username = 'yunfunChen';
-    
-    try {
-        // 載入用戶資訊
-        const userResponse = await fetch(`https://api.github.com/users/${username}`);
-        const userData = await userResponse.json();
-        
-        if (userResponse.ok) {
-            document.getElementById('github-name').textContent = userData.name || userData.login;
-            document.getElementById('github-bio').textContent = userData.bio || 'Passionate Software Engineer';
-            document.getElementById('repo-count').textContent = userData.public_repos;
-            document.getElementById('followers-count').textContent = userData.followers;
-            document.getElementById('following-count').textContent = userData.following;
-        }
-        
-        // 載入 repositories
-        const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
-        const reposData = await reposResponse.json();
-        
-        if (reposResponse.ok) {
-            const reposGrid = document.getElementById('repos-grid');
-            reposGrid.innerHTML = '';
-            
-            reposData.forEach(repo => {
-                if (!repo.fork) {  // 排除 fork 的項目
-                    const repoCard = createRepoCard(repo);
-                    reposGrid.appendChild(repoCard);
-                }
-            });
-        }
-        
-    } catch (error) {
-        console.error('Error loading GitHub data:', error);
-        document.getElementById('github-bio').textContent = 'Error loading GitHub data';
-    }
-}
-
-function createRepoCard(repo) {
-    const card = document.createElement('div');
-    card.className = 'repo-card';
-    
-    const updatedDate = new Date(repo.updated_at).toLocaleDateString();
-    
-    card.innerHTML = `
-        <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
-        <p class="repo-description">${repo.description || 'No description available'}</p>
-        <div class="repo-stats">
-            ${repo.language ? `<div class="repo-stat"><span class="repo-language">●</span> ${repo.language}</div>` : ''}
-            <div class="repo-stat">
-                <i class="fa-regular fa-star"></i> ${repo.stargazers_count}
-            </div>
-            <div class="repo-stat">
-                <i class="fa-solid fa-code-fork"></i> ${repo.forks_count}
-            </div>
-            <div class="repo-stat">Updated ${updatedDate}</div>
-        </div>
-    `;
-    
-    return card;
-}
-
-// 頁面載入時載入 GitHub 資料
-window.addEventListener('load', () => {
-    setTimeout(loadGitHubData, 2000);
-});
-
-// 項目詳細資訊數據
-const projectsData = {
-    'iot-sensing': {
-        title: 'IoT Sensing System',
-        image: 'images/work-1.png',
-        description: '這是一個整合 RFID 和 LoRa 無線通信技術的物聯網感測系統，專為工業4.0環境設計。系統能夠自動收集感測器數據，並通過機器學習演算法進行實時分析和預測。此專案展示了我在嵌入式系統開發、無線通信協議實作，以及數據處理與分析方面的深度技術能力。',
-        features: [
-            'RFID 標籤識別和追蹤系統',
-            'LoRa 長距離低功耗無線通信',
-            '機器學習演算法數據分析',
-            '實時數據監控儀表板',
-            '自動化報警和通知系統',
-            '數據庫整合和歷史數據管理'
-        ],
-        technologies: ['C/C++', 'RFID', 'LoRa', 'Machine Learning', 'Python', 'PostgreSQL'],
-        githubUrl: '#',
-        demoUrl: '#'
-    },
-    'aws-cloud': {
-        title: 'AWS Cloud Integration',
-        image: 'images/work-2.png',
-        description: '全方位的雲端架構解決方案，整合 AWS IoT Core、EC2 和 RDS 服務。這個專案建立了一個可擴展的雲端平台，能夠處理大量物聯網設備數據，提供即時數據處理、儲存和視覺化功能。展現了我在雲端架構設計、微服務開發和 DevOps 實作方面的專業技能。',
-        features: [
-            'AWS IoT Core 設備管理和通信',
-            'EC2 自動擴展和負載平衡',
-            'RDS 數據庫高可用性配置',
-            '實時數據流處理 (Kinesis)',
-            '數據視覺化儀表板',
-            'CloudWatch 監控和告警',
-            'Lambda 無服務器運算整合'
-        ],
-        technologies: ['AWS IoT', 'EC2', 'RDS', 'Python', 'Node.js', 'CloudFormation'],
-        githubUrl: '#',
-        demoUrl: '#'
-    },
-    'automation-testing': {
-        title: 'Automation Testing Framework',
-        image: 'images/work-3.png',
-        description: '企業級自動化測試框架，使用 Selenium WebDriver 和 Python 開發。框架支援多瀏覽器測試、並行執行、詳細報告生成和 CI/CD 整合。這個專案大幅提升了軟體開發流程的效率和品質，減少了人工測試的時間成本，確保了產品的穩定性和可靠性。',
-        features: [
-            'Selenium WebDriver 多瀏覽器支援',
-            '頁面物件模式 (Page Object Model)',
-            '並行測試執行和管理',
-            'HTML 和 Allure 測試報告',
-            'CI/CD 流水線整合',
-            'API 測試自動化',
-            '測試數據管理和配置',
-            '失敗案例自動截圖'
-        ],
-        technologies: ['Selenium', 'Python', 'Pytest', 'CI/CD', 'Jenkins', 'Allure'],
-        githubUrl: '#',
-        demoUrl: '#'
-    }
-};
-
-// 開啟項目詳細資訊彈窗
-function openProjectModal(projectId) {
-    const project = projectsData[projectId];
-    if (!project) return;
-    
-    document.getElementById('modal-title').textContent = project.title;
-    document.getElementById('modal-image').src = project.image;
-    document.getElementById('modal-description').textContent = project.description;
-    
-    // 載入功能列表
-    const featuresList = document.getElementById('modal-features');
-    featuresList.innerHTML = '';
-    project.features.forEach(feature => {
-        const li = document.createElement('li');
-        li.textContent = feature;
-        featuresList.appendChild(li);
-    });
-    
-    // 載入技術標籤
-    const techContainer = document.getElementById('modal-technologies');
-    techContainer.innerHTML = '';
-    project.technologies.forEach(tech => {
-        const span = document.createElement('span');
-        span.className = 'tech-tag';
-        span.textContent = tech;
-        techContainer.appendChild(span);
-    });
-    
-    // 設定連結
-    document.getElementById('modal-github-link').href = project.githubUrl;
-    document.getElementById('modal-demo-link').href = project.demoUrl;
-    
-    // 顯示彈窗
-    document.getElementById('project-modal').style.display = 'block';
-    document.body.style.overflow = 'hidden'; // 防止背景滾動
-}
-
-// 關閉項目詳細資訊彈窗
-function closeProjectModal() {
-    document.getElementById('project-modal').style.display = 'none';
-    document.body.style.overflow = 'auto'; // 恢復滾動
-}
-
-// 點擊彈窗外部關閉
-window.addEventListener('click', function(event) {
-    const modal = document.getElementById('project-modal');
-    if (event.target === modal) {
-        closeProjectModal();
-    }
-});
-
-// 深色模式切換功能
-function initTheme() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const body = document.body;
-    
-    // 從 localStorage 載入主題偏好
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    
-    if (savedTheme === 'light') {
-        body.setAttribute('data-theme', 'light');
-        themeIcon.className = 'fa-solid fa-sun';
-    } else {
-        body.removeAttribute('data-theme');
-        themeIcon.className = 'fa-solid fa-moon';
-    }
-    
-    // 主題切換事件監聽器
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = body.getAttribute('data-theme');
-        
-        if (currentTheme === 'light') {
-            // 切換到深色模式
-            body.removeAttribute('data-theme');
-            themeIcon.className = 'fa-solid fa-moon';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            // 切換到淺色模式
-            body.setAttribute('data-theme', 'light');
-            themeIcon.className = 'fa-solid fa-sun';
-            localStorage.setItem('theme', 'light');
-        }
-    });
-}
-
-// 頁面載入時初始化主題
-window.addEventListener('DOMContentLoaded', initTheme);
-
-// 載入畫面控制
-function initLoadingScreen() {
-    const loadingScreen = document.getElementById('loading-screen');
-    const progressBar = document.getElementById('progress-bar');
-    const loadingText = document.querySelector('.loading-text-content');
-    
-    const loadingSteps = [
-        { progress: 20, text: 'Loading assets...' },
-        { progress: 40, text: 'Initializing components...' },
-        { progress: 60, text: 'Loading GitHub data...' },
-        { progress: 80, text: 'Setting up animations...' },
-        { progress: 100, text: 'Almost ready...' }
-    ];
-    
-    let currentStep = 0;
-    
-    function updateProgress() {
-        if (currentStep < loadingSteps.length) {
-            const step = loadingSteps[currentStep];
-            progressBar.style.width = step.progress + '%';
-            loadingText.textContent = step.text;
-            currentStep++;
-            
-            setTimeout(updateProgress, 400 + Math.random() * 200);
-        } else {
-            // 完成載入
-            setTimeout(() => {
-                loadingScreen.classList.add('fade-out');
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                    // 啟動其他動畫和功能
-                    document.body.style.overflow = 'auto';
-                }, 500);
-            }, 300);
-        }
-    }
-    
-    // 延遲開始載入動畫
-    setTimeout(updateProgress, 500);
-}
-
-// 頁面載入完成後啟動載入畫面
-window.addEventListener('load', () => {
-    initLoadingScreen();
-    setTimeout(typeWriter, 2000);
-    setTimeout(animateSkillBars, 2500);
-    setTimeout(animateStats, 3000);
-    setTimeout(loadGitHubData, 3500);
-});
-
-
-// AOS Animation 初始化
-AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-    offset: 100
-});
-
-// 側邊菜單開關
-var sidemenu = document.getElementById("sidemenu");
-
-function openmenu(){
-    sidemenu.style.right = "0";
-}
-
-function closemenu(){
-    sidemenu.style.right = "-200px";
-}
-
-// 滾動事件處理器 - 整合多個功能
-function handleScrollEffects() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    
-    // 更新滾動進度條
-    const scrollProgressBar = document.getElementById('scroll-progress-bar');
-    if (scrollProgressBar) {
-        scrollProgressBar.style.width = scrollPercent + '%';
-    }
-    
-    // 顯示/隱藏回到頂部按鈕
-    const backToTopBtn = document.getElementById('back-to-top');
-    if (scrollTop > 300) {
-        backToTopBtn.classList.add('show');
-    } else {
-        backToTopBtn.classList.remove('show');
-    }
-    
-    // 導航高亮效果
-    let current = '';
-    const sections = document.querySelectorAll('div[id]');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 200;
-        if (scrollTop >= sectionTop) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    const menuLinks = document.querySelectorAll('nav ul li a');
-    menuLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-        }
-    });
-}
-
-// 回到頂部功能
-function initBackToTop() {
-    const backToTopBtn = document.getElementById('back-to-top');
-    
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-// 統一的滾動事件監聽器
-window.addEventListener('scroll', handleScrollEffects);
-
-// 初始化回到頂部按鈕
-window.addEventListener('DOMContentLoaded', initBackToTop);
-</script>
-</main>
-
+    <!-- JavaScript -->
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

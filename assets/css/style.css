@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Portfolio V2 - Main Stylesheet
+   Modern, Clean, Professional Design
+   ========================================================================== */
+
+/* Import Design System & Base */
+@import 'abstracts/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+@import 'layout/grid.css';
+
+/* Import Components */
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/buttons.css';
+@import 'components/about.css';
+@import 'components/services.css';
+@import 'components/portfolio.css';
+@import 'components/github.css';
+@import 'components/contact.css';
+@import 'components/footer.css';
+@import 'components/loading.css';
+@import 'components/utilities.css';
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+}
+
+::-moz-selection {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-400);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-500);
+}
+
+/* Dark theme scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--gray-800);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--primary-400);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color var(--transition-base), 
+              color var(--transition-base), 
+              border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+/* Ensure images and media are responsive */
+img, 
+video, 
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Print styles */
+@media print {
+  * {
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  .header,
+  .footer,
+  .back-to-top,
+  .scroll-progress {
+    display: none !important;
+  }
+}

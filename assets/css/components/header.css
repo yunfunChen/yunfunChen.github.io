@@ -1,0 +1,318 @@
+/* ==========================================================================
+   Header Component
+   ========================================================================== */
+
+.header {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--bg-secondary) 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .header {
+  background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+}
+
+/* Navigation */
+.nav {
+  position: relative;
+  z-index: var(--z-fixed);
+  padding: var(--space-6) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .nav {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-4) 0;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .nav.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-500);
+  background-color: var(--primary-50);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  background-color: var(--primary-900);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-500);
+  transform: translateX(-50%);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+/* Navigation Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.theme-toggle,
+.language-toggle {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-full);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover,
+.language-toggle:hover {
+  border-color: var(--primary-500);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.theme-toggle i {
+  position: absolute;
+  font-size: 18px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* Light theme (default) */
+.dark-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.light-icon {
+  opacity: 0;
+  transform: rotate(180deg) scale(0.8);
+}
+
+/* Dark theme */
+html[data-theme="dark"] .dark-icon {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0.8);
+}
+
+html[data-theme="dark"] .light-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Enhanced hover effects for theme toggle */
+.theme-toggle:hover i {
+  transform-origin: center;
+}
+
+.theme-toggle:hover .dark-icon {
+  animation: icon-bounce 0.3s ease-in-out;
+}
+
+.theme-toggle:hover .light-icon {
+  animation: icon-bounce 0.3s ease-in-out;
+}
+
+@keyframes icon-bounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(-5deg); }
+}
+
+.language-toggle {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  width: auto;
+  padding: 0 var(--space-3);
+  min-width: 44px;
+}
+
+/* Mobile Navigation */
+.nav-toggle,
+.nav-close {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.nav-toggle:hover,
+.nav-close:hover {
+  color: var(--primary-500);
+  transform: scale(1.1);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--space-6);
+    box-shadow: var(--shadow-xl);
+    transition: right var(--transition-base);
+    z-index: var(--z-modal);
+    border-left: 1px solid var(--border-color);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+    width: 100%;
+    margin-top: var(--space-8);
+  }
+
+  .nav-link {
+    padding: var(--space-4);
+    text-align: center;
+    border-radius: var(--radius-lg);
+    font-size: var(--text-lg);
+  }
+
+  .nav-toggle,
+  .nav-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-close {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+  }
+
+  .nav-actions {
+    position: fixed;
+    top: var(--space-4);
+    right: var(--space-16);
+    z-index: calc(var(--z-modal) + 1);
+    background: var(--bg-secondary);
+    padding: var(--space-2);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .theme-toggle,
+  .language-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .language-toggle {
+    min-width: 36px;
+    padding: 0 var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: var(--space-4) 0;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    right: -100%;
+  }
+
+  .nav-actions {
+    right: var(--space-12);
+  }
+}
